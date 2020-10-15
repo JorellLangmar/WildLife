@@ -8,6 +8,7 @@ import App from "./App";
 import "./styles/reset.css";
 import "./styles/global.css";
 import "./styles/home.css";
+import "./styles/signup.css";
 
 
 ReactDOM.render(
