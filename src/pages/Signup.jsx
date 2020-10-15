@@ -1,6 +1,6 @@
 import React from "react";
 import FormSignup from "../components/Forms/FormSignup";
-import {FormSizeDemo} from "../components/Forms/Signup";
+import FormSizeDemo from "../components/Forms/Signup";
 
 
 const Signup = (props) => {
