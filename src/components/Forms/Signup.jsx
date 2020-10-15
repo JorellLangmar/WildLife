@@ -14,12 +14,19 @@ import {
   Switch,
 } from 'antd';
 
-const FormSizeDemo = () => {
-  const [componentSize, setComponentSize] = useState('default');
+class FormSizeDemo  extends React.Component  {
 
-  const onFormLayoutChange = ({ size }) => {
-    setComponentSize(size);
+    state= {
+        componentSize: "default"
+    }
+
+ // const [componentSize, setComponentSize] = useState('default');
+
+  onFormLayoutChange = ({ size }) => {
+    this.setState({componentSize: size});
   };
+  render(){
+
 
   return (
     <>
@@ -32,10 +39,10 @@ const FormSizeDemo = () => {
         }}
         layout="horizontal"
         initialValues={{
-          size: componentSize,
+          size: this.state.componentSize,
         }}
-        onValuesChange={onFormLayoutChange}
-        size={componentSize}
+        onValuesChange={this.onFormLayoutChange}
+        size={this.state.componentSize}
       >
         <Form.Item label="Form Size" name="size">
           <Radio.Group>
@@ -99,6 +106,7 @@ const FormSizeDemo = () => {
       </Form>
     </>
   );
+}
 };
 
 
