@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { UserContext } from "../Auth/UserContext";
 import apiHandler from "../../api/apiHandler";
+import { useForm } from "react-hook-form";
 
 class FormSignup extends Component {
   static contextType = UserContext;
@@ -38,9 +39,12 @@ class FormSignup extends Component {
       });
   };
 
+
+  
   render() {
     return (
       <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+
         <label htmlFor="email">Email</label>
         <input type="email" id="email" name="email" />
         <label htmlFor="password">Password</label>

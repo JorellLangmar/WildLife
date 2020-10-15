@@ -23,8 +23,8 @@ const NavBar = (props) => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+    <Navbar sticky="top" collapseOnSelect expand="lg" bg="light" variant="light">
+      <Navbar.Brand href="/">Logo</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
