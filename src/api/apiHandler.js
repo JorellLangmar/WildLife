@@ -17,6 +17,7 @@ export default {
   service,
 
   signup(userInfo) {
+    console.log(userInfo);
     return service
       .post("/api/auth/signup", userInfo)
       .then((res) => res.data)

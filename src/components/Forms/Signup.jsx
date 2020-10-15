@@ -1,28 +1,22 @@
 import React from "react";
 import apiHandler from "../../api/apiHandler";
 import { withRouter } from "react-router-dom";
-import {
-  Row,
-  Card,
-  Form,
-  Input,
-  Button,
-  Radio,
-  Select,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
-} from "antd";
+import { Form, Input, Button } from "antd";
+import { UserContext } from "../Auth/UserContext";
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+
 
 import "../../styles/signup.css";
 
 class FormSizeDemo extends React.Component {
+    static contextType = UserContext;
+
   state = {
     componentSize: "default",
     email: "",
     password: "",
+    firstname: "",
+    lastname: "",
   };
 
   // const [componentSize, setComponentSize] = useState('default');
@@ -45,8 +39,7 @@ class FormSizeDemo extends React.Component {
   };
 
   handleSubmit = (event) => {
-    event.preventDefault();
-
+    // event.preventDefault();
     apiHandler
       .signup(this.state)
       .then((data) => {
@@ -75,8 +68,7 @@ class FormSizeDemo extends React.Component {
           onValuesChange={this.onFormLayoutChange}
           size={this.state.componentSize}
           onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-          style={{marginLeft:"50%", marginTop:"10%"}}
+          style={{ marginLeft: "50%", marginTop: "10%" }}
         >
           {/* <Form.Item label="Form Size" name="size">
           <Radio.Group>
@@ -85,11 +77,11 @@ class FormSizeDemo extends React.Component {
             <Radio.Button value="large">Large</Radio.Button>
           </Radio.Group>
         </Form.Item> */}
-          <Form.Item label="" style={{fontSize:"150%"}}>
+          <Form.Item label="" style={{ fontSize: "150%" }}>
             First Name
-            <Input name="" />
+            <Input name="firstname" />
           </Form.Item>
-          <Form.Item label="" style={{fontSize:"150%"}}>
+          <Form.Item label="" style={{ fontSize: "150%" }}>
             Last Name
             <Input name="lastname" />
           </Form.Item>
@@ -101,13 +93,23 @@ class FormSizeDemo extends React.Component {
             Phone Number
             <Input name="phone" />
           </Form.Item> */}
-          <Form.Item label="" style={{fontSize:"150%"}}>
+          <Form.Item
+            label=""
+            style={{ fontSize: "150%" }}
+            rules={[{ type: "email" }]}
+          >
             Email
             <Input name="email" />
           </Form.Item>
-          <Form.Item label="" style={{fontSize:"150%"}}>
+          <Form.Item
+            label=""
+            style={{ fontSize: "150%" }}
+            rules={[{ type: "password" }]}
+          >
             Password
-            <Input name="password" />
+            <Input name="password" prefix={<LockOutlined className="site-form-item-icon" />}
+          type="password"
+          placeholder="Password"/>
           </Form.Item>
           {/* <Form.Item label="Select">
             <Select>
@@ -156,7 +158,7 @@ class FormSizeDemo extends React.Component {
             <Switch />
           </Form.Item> */}
           <Form.Item label="">
-            <Button>Submit</Button>
+            <Button onClick={this.handleSubmit}>Submit</Button>
           </Form.Item>
         </Form>
       </>
