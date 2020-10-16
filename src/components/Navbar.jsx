@@ -4,7 +4,6 @@ import { withUser } from "../components/Auth/withUser";
 import apiHandler from "../api/apiHandler";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 // import "../styles/NavMain.css";
 
@@ -23,7 +22,7 @@ const NavBar = (props) => {
   }
 
   return (
-    <Navbar sticky="top" collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar sticky="top" collapseOnSelect expand="lg" variant="light" style={{backgroundColor:"transparent"}}>
       <Navbar.Brand href="/">Logo</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

@@ -1,10 +1,14 @@
 import React from "react";
-import FormSignup from "../components/Forms/FormSignup";
 import FormSizeDemo from "../components/Forms/Signup";
-
+import Navbar from "../components/Navbar";
 
 const Signup = (props) => {
-  return <FormSizeDemo />;
+  return (
+    <div className="signupPage">
+      <Navbar sticky="top" />
+        <FormSizeDemo className='signup'/>
+    </div>
+  );
 };
 
 export default Signup;
