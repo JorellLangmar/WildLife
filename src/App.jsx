@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'antd/dist/antd.css';
 import 'semantic-ui-css/semantic.min.css'
 import CreateAnimals from "./pages/Createanimals";
+import AnimalDetail from "./components/AnimalDetail";
 
 class App extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends React.Component {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/Createanimals" component={CreateAnimals} />
           <ProtectedRoute exact path="/profile" component={Profile} />
+          <Route exact path="/:id" component={AnimalDetail} />
         </Switch>
       </div>
     );

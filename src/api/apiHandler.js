@@ -63,6 +63,10 @@ export default {
     return service
     .post("/api/animal", data)
     .then((res) => res.data)
-    .catch(errorHandler);
+    .catch(errorHandler)
+  },
+
+  getOne(endPoint, id) {
+    return service.get(endPoint + id);
   },
 };

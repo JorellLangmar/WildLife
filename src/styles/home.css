@@ -14,5 +14,14 @@
     justify-content: center;
     padding-top: 10%;
     font-size: 1000%;
-    color: sandybrown;
+    /* color: sandybrown; */
+    color: #455;
+}
+
+.home h2 {
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    letter-spacing: 12px;
 }
