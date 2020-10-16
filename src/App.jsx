@@ -9,6 +9,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'antd/dist/antd.css';
+import 'semantic-ui-css/semantic.min.css'
+import CreateAnimals from "./pages/Createanimals";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +29,7 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/signin" component={Signin} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/Createanimals" component={CreateAnimals} />
           <ProtectedRoute exact path="/profile" component={Profile} />
         </Switch>
       </div>

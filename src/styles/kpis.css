@@ -1,0 +1,35 @@
+.kpis .wrapper {
+  background-color: lightgrey;
+  color: rgb(225, 169, 95);
+  font-size: 200%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0%;
+  grid-auto-rows: minmax(30vh, auto);
+  align-items: center;
+  /* justify-items: center; */
+}
+.kpis .one {
+  text-align: center;
+  width: 25vw;
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+.kpis .two {
+  text-align: center;
+  width: 25vw;
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+.kpis .three {
+  text-align: center;
+  width: 25vw;
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+.kpis .four {
+  text-align: center;
+  width: 25vw;
+  grid-column: 4/ 4;
+  grid-row: 1;
+}

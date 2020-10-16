@@ -9,6 +9,8 @@ import "./styles/reset.css";
 import "./styles/global.css";
 import "./styles/home.css";
 import "./styles/signup.css";
+import "./styles/whatwedo.css";
+import "./styles/kpis.css";
 
 
 ReactDOM.render(

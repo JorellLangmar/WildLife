@@ -3,7 +3,7 @@ import apiHandler from "../../api/apiHandler";
 import { withRouter } from "react-router-dom";
 import { Form, Input, Button } from "antd";
 import { UserContext } from "../Auth/UserContext";
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { LockOutlined } from '@ant-design/icons';
 
 
 import "../../styles/signup.css";
@@ -68,7 +68,7 @@ class FormSizeDemo extends React.Component {
           onValuesChange={this.onFormLayoutChange}
           size={this.state.componentSize}
           onChange={this.handleChange}
-          style={{ marginLeft: "50%", marginTop: "10%" }}
+          style={{ paddingLeft: "50%", paddingTop: "10%" }}
         >
           {/* <Form.Item label="Form Size" name="size">
           <Radio.Group>

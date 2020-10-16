@@ -7,13 +7,15 @@ class UserProvider extends Component {
     user: null,
     isLoggedIn: false,
     isLoading: true,
+    isAdmin: false,
   };
 
   componentDidMount() {
     apiHandler
       .isLoggedIn()
       .then((data) => {
-        this.setState({ user: data, isLoggedIn: true, isLoading: false });
+        // console.log(data.admin);
+        this.setState({ user: data, isLoggedIn: true, isLoading: false, isAdmin: data.admin });
       })
       .catch((error) => {
         this.setState({ user: null, isLoggedIn: false, isLoading: false });
@@ -37,6 +39,7 @@ class UserProvider extends Component {
       removeUser: this.removeUser,
       isLoggedIn: this.state.isLoggedIn,
       isLoading: this.state.isLoading,
+      isAdmin: this.state.isAdmin,
     };
 
     return (

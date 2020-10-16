@@ -9,6 +9,7 @@ import Nav from "react-bootstrap/Nav";
 
 const NavBar = (props) => {
   const { context } = props;
+  // console.log(context);
 
   function handleLogout() {
     apiHandler
@@ -22,7 +23,7 @@ const NavBar = (props) => {
   }
 
   return (
-    <Navbar sticky="top" collapseOnSelect expand="lg" variant="light" style={{backgroundColor:"transparent"}}>
+    <Navbar fixed="top" collapseOnSelect expand="lg" variant="light" style={{backgroundColor:"transparent"}}>
       <Navbar.Brand href="/">Logo</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -42,6 +43,15 @@ const NavBar = (props) => {
           {/* </NavDropdown> */}
         </Nav>
         <Nav>
+          <Nav.Link eventKey={3}>
+            {context.isAdmin && (
+                <React.Fragment>
+                <li>
+                <NavLink to="/CreateAnimals">Create Animals</NavLink>
+                </li>
+              </React.Fragment>
+            )}
+          </Nav.Link>
           <Nav.Link>
             {context.isLoggedIn && (
               <React.Fragment>
@@ -50,11 +60,9 @@ const NavBar = (props) => {
                     {context.user && context.user.email}
                   </NavLink>
                 </li>
-                <li>
-                  <p onClick={handleLogout}>Logout</p>
-                </li>
-              </React.Fragment>
+                </React.Fragment>
             )}
+            
             {!context.isLoggedIn && (
               <React.Fragment>
                 <li>
@@ -68,6 +76,13 @@ const NavBar = (props) => {
               <React.Fragment>
                 <li>
                   <NavLink to="/signup">Create account</NavLink>
+                </li>
+              </React.Fragment>
+            )}
+            {context.isLoggedIn && (
+                <React.Fragment>
+                <li>
+                  <p onClick={handleLogout}>Logout</p>
                 </li>
               </React.Fragment>
             )}

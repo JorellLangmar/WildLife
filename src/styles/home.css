@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
 .home {
     background-image: url("../media/homeBackground.jpeg");
     background-size: cover;
     width: 100vw;
-    height: 100vh
+    height: 100vh;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.home h1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 10%;
+    font-size: 1000%;
+    color: sandybrown;
 }
