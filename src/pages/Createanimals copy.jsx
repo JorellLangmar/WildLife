@@ -4,8 +4,8 @@ import { Form, Button, Radio } from "semantic-ui-react";
 import apiHandler from "../api/apiHandler";
 
 const options = [
-  { key: "m", text: "Male", value: "Male" },
-  { key: "f", text: "Female", value: "Female" },
+  { key: "m", text: "Male", value: "male" },
+  { key: "f", text: "Female", value: "female" },
 ];
 
 class FormExampleSubcomponentControl extends Component {
@@ -22,32 +22,23 @@ class FormExampleSubcomponentControl extends Component {
   handleChange = (event) => {
     const value =
       event.target.type === "file"
-        ? event.target.files[0].name
+        ? event.target.files[0]
         : event.target.type === "checkbox"
         ? event.target.checked
         : event.target.value;
 
     const key = event.target.name;
+
     this.setState({ [key]: value });
-  };
-
-  handleSelectChange = (e, { value }) => {
-    this.setState({
-      gender: value,
-    });
-  };
-
-  handleRadioChange = (e, { value }) => {
-    this.setState({
-      ConservationStatus: value,
-    });
   };
 
   handleSubmit = (event) => {
     // event.preventDefault();
     apiHandler
       .createAnimal(this.state)
-      .then(() => {
+      .then((data) => {
+        console.log(data);
+        this.context.setUser(data);
         this.props.history.push("/");
       })
       .catch((error) => {
@@ -88,7 +79,7 @@ class FormExampleSubcomponentControl extends Component {
               options={options}
               placeholder="Gender"
               name="gender"
-              onChange={this.handleSelectChange}
+              onChange={this.handleChange}
             />
           </Form.Group>
           <Form.Group inline>
@@ -98,42 +89,42 @@ class FormExampleSubcomponentControl extends Component {
               value="Critical"
               checked={value === "Critical"}
               name="ConservationStatus"
-              onChange={this.handleRadioChange}
+              //   onChange={this.handleChange}
             />
             <Form.Radio
               label="Vulnerable"
               value="Vulnerable"
               checked={value === "Vulnerable"}
               name="ConservationStatus"
-              onChange={this.handleRadioChange}
+              //   onChange={this.handleChange}
             />
             <Form.Radio
               label="Least Concerned"
               value="Least Concerned"
               checked={value === "Least Concerned"}
               name="ConservationStatus"
-              onChange={this.handleRadioChange}
+              //   onChange={this.handleChange}
             />
             <Form.Radio
               label="Near Threatened"
               value="Near Threatened"
               checked={value === "Near Threatened"}
               name="ConservationStatus"
-              onChange={this.handleRadioChange}
+              //   onChange={this.handleChange}
             />
             <Form.Radio
               label="Data Deficient"
               value="Data Deficient"
               checked={value === "Data Deficient"}
               name="ConservationStatus"
-              onChange={this.handleRadioChange}
+              //   onChange={this.handleChange}
             />
             <Form.Radio
               label="Endangered"
               value="Endangered"
               checked={value === "Endangered"}
               name="ConservationStatus"
-              onChange={this.handleRadioChange}
+              //   onChange={this.handleChange}
             />
           </Form.Group>
           <Form.TextArea

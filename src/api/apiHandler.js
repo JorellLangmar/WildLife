@@ -58,4 +58,11 @@ export default {
     .then((res) => res.data)
     .catch(errorHandler);
   },
+
+  createAnimal(data) {
+    return service
+    .post("/api/animal", data)
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
 };

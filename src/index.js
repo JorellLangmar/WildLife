@@ -12,6 +12,7 @@ import "./styles/signup.css";
 import "./styles/whatwedo.css";
 import "./styles/kpis.css";
 import "./styles/animalCards.css";
+import "./styles/createanimals.css";
 
 
 ReactDOM.render(
