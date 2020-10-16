@@ -10,7 +10,8 @@ class Home extends React.Component {
       <div>
           <Navbar />
         <div className="home">
-          <h1>Wild Life</h1>
+          <h1>R.O.A.R.</h1>
+          <h2>Reach Out And Rescue</h2>
         </div>
         <Whatwedo/>
         <Kpis/>

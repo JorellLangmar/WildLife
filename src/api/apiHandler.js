@@ -58,4 +58,8 @@ export default {
     .then((res) => res.data)
     .catch(errorHandler);
   },
+
+  getOne(endPoint, id) {
+    return service.get(endPoint + id);
+  },
 };
