@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Whatwedo from "../components/Whatwedo";
 import Kpis from "../components/Kpis";
+import AnimalCard from "../components/AnimalCards";
 
 class Home extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends React.Component {
         </div>
         <Whatwedo/>
         <Kpis/>
+        <AnimalCard/>
       </div>
     );
   }

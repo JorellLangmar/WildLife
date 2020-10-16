@@ -51,4 +51,11 @@ export default {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  getAll() {
+    return service
+    .get("/api/animal")
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
 };
