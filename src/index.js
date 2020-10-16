@@ -9,6 +9,7 @@ import "./styles/reset.css";
 import "./styles/global.css";
 import "./styles/home.css";
 import "./styles/signup.css";
+import "./styles/animalCards.css";
 
 
 ReactDOM.render(
