@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Image } from 'semantic-ui-react';
 import apiHandler from "../api/apiHandler";
-
+import "../styles/animalDetail.css";
 
 class AnimalDetail extends React.Component {
 state = {
@@ -23,16 +23,37 @@ state = {
 
   render() {
     return (
-      <div>
+      <div className="animalDetails">
           <Grid>
     <Grid.Column width={4}>
-    <h2>{this.state.animal.name}</h2>
+    <img src={this.state.animal.profileImage} alt="Animal Portrait" className="animalPortrait"/>
     </Grid.Column>
     <Grid.Column width={9}>
-      <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+    <div className="mid-part">
+      <h2 className="name">{this.state.animal.name}</h2>
+      <div className="ani-id">
+      <div className="specie"><p><span className="bold">Specie :</span></p>
+      <p>{this.state.animal.specie}</p></div>
+      </div>
+      <div className="ani-id desc">
+      <p><span className="bold">About :</span></p>
+      <p>{this.state.animal.description}: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      </div>
     </Grid.Column>
     <Grid.Column width={3}>
-      <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
+    <div className="ani-id">
+     <p><span className="bold">Age :</span></p>
+     <p>{this.state.animal.age}</p>
+    </div> 
+    <div className="ani-id">
+     <p><span className="bold">Gender :</span></p>
+     <p>{this.state.animal.gender}</p>
+    </div> 
+    <div className="ani-id">
+     <p><span className="bold">Conservation Status :</span></p>
+     <p>{this.state.animal.ConservationStatus}</p>
+     </div>
     </Grid.Column>
   </Grid>
       </div>

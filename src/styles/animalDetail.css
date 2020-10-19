@@ -1,0 +1,43 @@
+.animalDetails {
+    background-color:  rgb(240, 240, 240);
+    border-radius: 20px;
+    padding : 40px;
+    margin : 40px;
+    
+}
+
+.animalDetails * {
+    color:#455;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.name {
+    font-size: 3em;
+}
+
+.animalDetails p {
+    font-size : 1.3em;
+}
+
+.specie {
+    font-style : italic;
+}
+ 
+.ani-id {
+    margin-top : 20px;
+}
+
+.mid-part {
+    padding-right : 25px;
+}
+
+.desc {
+    text-align: justify;
+}
+
+.animalPortrait {
+    border-radius: 10px;
+}
