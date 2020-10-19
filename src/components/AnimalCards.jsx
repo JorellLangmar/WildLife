@@ -37,20 +37,28 @@ class AnimalCard extends React.Component {
       let result = this.state.animalcheck.filter((c) => {
         return c !== value;
       });
+      if ((result.length == 0)) {
+        result = this.state.species;
+      };
+      console.log(result);
+      console.log(result.length);
       this.setState({ animalcheck: result });
       apiHandler
-      .getSome(`${result}`)
-      .then((apiRes) => {
-        this.setState({ animals: apiRes });
-      })
-      .catch((apiErr) => {
-        console.log(apiErr);
-      });
+        .getSome(`${result}`)
+        .then((apiRes) => {
+          this.setState({ animals: apiRes });
+        })
+        .catch((apiErr) => {
+          console.log(apiErr);
+        });
     } else {
       const result = [...this.state.animalcheck];
       result.push(value);
+      // if ((result.length = 0)) {
+      //   result = this.state.species;
+      // }
       this.setState({ animalcheck: result });
-      console.log(result);
+      // console.log(result);
       // console.log(this.state.animalcheck);
       apiHandler
         .getSome(`${result}`)

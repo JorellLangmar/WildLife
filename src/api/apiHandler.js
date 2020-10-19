@@ -74,7 +74,7 @@ export default {
   },
 
   getSome(data) {
-    console.log(data);
+    // console.log(data);
     return service
     .get(`/api/animal/filter/${data}`)
     .then((res) => res.data)
