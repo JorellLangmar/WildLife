@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
-import { Form, Button, Radio } from "semantic-ui-react";
+import { Form, Button} from "semantic-ui-react";
 import apiHandler from "../api/apiHandler";
 
 const options = [
@@ -8,7 +8,7 @@ const options = [
   { key: "f", text: "Female", value: "Female" },
 ];
 
-class FormExampleSubcomponentControl extends Component {
+class CreateAnimals extends Component {
   state = {
     name: "",
     profileImage: "",
@@ -159,4 +159,4 @@ class FormExampleSubcomponentControl extends Component {
   }
 }
 
-export default FormExampleSubcomponentControl;
+export default CreateAnimals;

@@ -43,6 +43,15 @@ const NavBar = (props) => {
           {/* </NavDropdown> */}
         </Nav>
         <Nav>
+          <Nav.Link eventKey={4}>
+            {context.isAdmin && (
+                <React.Fragment>
+                <li>
+                <NavLink to="/ManageAnimals">Manage Animals</NavLink>
+                </li>
+              </React.Fragment>
+            )}
+          </Nav.Link>
           <Nav.Link eventKey={3}>
             {context.isAdmin && (
                 <React.Fragment>
