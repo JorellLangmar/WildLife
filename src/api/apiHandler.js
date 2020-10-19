@@ -69,4 +69,8 @@ export default {
   getOne(endPoint, id) {
     return service.get(endPoint + id);
   },
+
+  deleteAnimal(id) {
+    return service.delete("/api/animal/" + id);
+  }
 };

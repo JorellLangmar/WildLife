@@ -13,6 +13,7 @@ import "./styles/whatwedo.css";
 import "./styles/kpis.css";
 import "./styles/animalCards.css";
 import "./styles/createanimals.css";
+import "./styles/manageAnimals.css";
 
 
 ReactDOM.render(
