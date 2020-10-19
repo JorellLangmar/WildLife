@@ -66,6 +66,13 @@ export default {
     .catch(errorHandler)
   },
 
+  editAnimal(id, data) {
+    return service
+    .patch(`/api/animal/${id}`, data)
+    .then((res) => res.data)
+    .catch(errorHandler)
+  },
+
   getOne(endPoint, id) {
     return service.get(endPoint + id);
   },

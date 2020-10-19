@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, Checkbox, Icon, Table } from "semantic-ui-react";
 import Navbar from "../components/Navbar";
 import apiHandler from "../api/apiHandler";
+import { Link } from "react-router-dom";
+
 
 
 export default class Manageanimals extends Component {
@@ -49,15 +51,17 @@ export default class Manageanimals extends Component {
             </Table.Header>
 
             <Table.Body>
-            {this.state.animals.map((animal) => {
-              return  <Table.Row>
+            {this.state.animals.map((animal, i) => {
+              return  <Table.Row key={i}>
                 <Table.Cell collapsing>
                 <Icon onClick={() => (this.deleteAnimal(animal._id))} name="trash alternate"/>
                 </Table.Cell>
-                <Table.Cell>{animal.profileImage}</Table.Cell>
+                <Table.Cell style={{width:"20%"}}> <img style={{width:"100%", borderRadius:"10px"}} src={animal.profileImage} alt="animal"/></Table.Cell>
                 <Table.Cell>{animal.name}</Table.Cell>
                 <Table.Cell>{animal.description}</Table.Cell>
-                <Table.Cell><Icon name="edit"/></Table.Cell>
+                <Table.Cell> <Link to={`/Animals/${animal._id}/edit`}>
+                <Icon name="edit"/>
+        </Link></Table.Cell>
               </Table.Row>
             })}
             </Table.Body>
