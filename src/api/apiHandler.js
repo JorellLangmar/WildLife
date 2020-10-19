@@ -73,6 +73,14 @@ export default {
     .catch(errorHandler)
   },
 
+  getSome(data) {
+    console.log(data);
+    return service
+    .get(`/api/animal/filter/${data}`)
+    .then((res) => res.data)
+    .catch(errorHandler)
+  },
+
   getOne(endPoint, id) {
     return service.get(endPoint + id);
   },
