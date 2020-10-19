@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Grid, Image } from 'semantic-ui-react';
 import apiHandler from "../api/apiHandler";
 import "../styles/animalDetail.css";
+import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 class AnimalDetail extends React.Component {
 state = {
@@ -23,7 +25,14 @@ state = {
 
   render() {
     return (
+      <div>
+      
+      <div className="navbarfix">
+      <Navbar />
+      </div>
+
       <div className="animalDetails">
+      
           <Grid>
     <Grid.Column width={4}>
     <img src={this.state.animal.profileImage} alt="Animal Portrait" className="animalPortrait"/>
@@ -56,6 +65,32 @@ state = {
      </div>
     </Grid.Column>
   </Grid>
+      </div>
+
+  <div className="sponsorship">
+<div className="why-sponsor">
+    <h1 className="why">Sponsor {this.state.animal.name} now !</h1>
+    <h2 className="why2">Why sponsor an animal?</h2>
+    <p className="text-sponsor">Today, R.O.A.R. needs your support so it can take things even further: now you can sponsor the animal of your choice and help to protect an endangered species!
+Thanks to your donation, you’ll be contributing to the well-being of the animals at the Sanctuary (veterinary equipment or enclosures, animal food, environmental enrichment programmes, various expenses) or the protection of endangered species in their native habitats (on-site conservation programmes).</p>
+</div>
+
+  <div className="grid">
+    <Grid>
+    <Grid.Column width={4}>
+    <div className="sponsor"><Link to={`/#`} style={{color:'white'}}>Punctual<br/> Sponsorship</Link></div>
+    </Grid.Column>
+    <Grid.Column width={4}>
+    <div className="sponsor"><Link to={`/#`} style={{color:'white'}}>Monthly<br/> Sponsorship</Link></div>
+    </Grid.Column>
+    <Grid.Column width={4}>
+    <div className="sponsor"><Link to={`/#`} style={{color:'white'}}>1 year<br/>Adoption</Link></div>
+    </Grid.Column>
+  </Grid>
+  </div>
+      </div>
+
+
       </div>
     )
   }

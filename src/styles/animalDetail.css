@@ -2,8 +2,7 @@
     background-color:  rgb(240, 240, 240);
     border-radius: 20px;
     padding : 40px;
-    margin : 40px;
-    
+    margin : 40px;  
 }
 
 .animalDetails * {
@@ -40,4 +39,53 @@
 
 .animalPortrait {
     border-radius: 10px;
+}
+
+.sponsorship {
+    background-color:  rgb(240, 240, 240);
+    border-radius: 20px;
+    padding : 40px;
+    margin : 40px;  
+}
+
+.sponsor {
+    background-color: #455;
+    color : white;
+    border-radius : 10px;
+    text-align: center;
+    font-size: 2em;
+    padding-top : 20px;
+    padding-bottom: 30px;
+}
+
+
+.why-sponsor {
+  text-align: center;
+  margin-bottom : 20px;
+}
+
+.why {
+    background-color: #455;
+    color : white;
+    width : 400px;
+    margin : 0 auto;
+    border-radius: 30px;
+    padding: 5px 30px 10px 30px;
+    margin-bottom : 20px;
+}
+
+.why2 {
+    color : #455;
+    margin-bottom : 20px;
+}
+
+.text-sponsor {
+    color : #455;
+    width : 800px;
+    margin : 0 auto;
+    font-size: 1.1em;
+}
+
+.grid {
+    justify-content: center;
 }

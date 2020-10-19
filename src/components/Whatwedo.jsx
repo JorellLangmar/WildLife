@@ -4,14 +4,13 @@ export default class Whatwedo extends Component {
   render() {
     return (
       <div className="whatwedo">
-        <h1>What we do?</h1>
+        <h1>What we do :</h1>
         <p>
-          Animals rescued from the illegal wildlife trade are often injured,
-          traumatized or orphaned. They are brought to Phnom Tamao Wildlife
-          Rescue Center where they receive expert care and attention. No animal
-          is turned away. Your sponsorship ensures a happy and healthy future
-          for all 1,200 animals that call Phnom Tamao home! Meet some of our
-          rescued animals below!
+        R.O.A.R. (Reach Out And Rescue) is a conservation charity dedicated to rescuing and preserving the wildlife of Namibia. Originating as a small wildlife sanctuary nestled in the Namibian bush, R.O.A.R. is now a world-famous conservation organisation.
+
+The R.O.A.R. Sanctuary provides a safe haven and second chance for countless injured, orphaned and conflict animals. Wherever possible our aim is to release animals back into the wild.
+
+Our mission is to conserve the land, cultures and wildlife of Namibia, Africa. We aim to achieve this through encouraging participation, education and scientific research.
         </p>
       </div>
     );

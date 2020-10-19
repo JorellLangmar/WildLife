@@ -1,35 +1,54 @@
-.kpis .wrapper {
+.wrapper {
+    justify-content: center;
+     display: grid;
+     grid-template-columns: repeat(4, minmax(20vw, 20vw));
+     grid-template-rows: auto auto auto;
+     column-gap: 60px;
+     row-gap: 60px;
+     margin-bottom: 40px;
+}
+
+.kpi {
+  border: black solid 1px;
+  border-radius : 10px;
+  text-align: center;
+}
+
+.num {
+  font-weight: bold;
+}
+
+/* .wrapper {
   background-color: lightgrey;
-  color: rgb(225, 169, 95);
-  font-size: 200%;
+  color: black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0%;
   grid-auto-rows: minmax(30vh, auto);
   align-items: center;
-  /* justify-items: center; */
+ 
 }
-.kpis .one {
+.one {
   text-align: center;
   width: 25vw;
   grid-column: 1 / 4;
   grid-row: 1;
 }
-.kpis .two {
+.two {
   text-align: center;
   width: 25vw;
   grid-column: 2 / 4;
   grid-row: 1;
 }
-.kpis .three {
+.three {
   text-align: center;
   width: 25vw;
   grid-column: 3 / 4;
   grid-row: 1;
 }
-.kpis .four {
+.four {
   text-align: center;
   width: 25vw;
   grid-column: 4/ 4;
   grid-row: 1;
-}
+} */

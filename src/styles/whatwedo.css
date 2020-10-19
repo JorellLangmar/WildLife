@@ -12,4 +12,11 @@
 
 .whatwedo h1 {
     margin: 2.5%;
+    color : #455;
+}
+
+.whatwedo p {
+     color : #455;
+     width : 80vw;
+     font-size : 1.3em;
 }
