@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Icon, Table } from "semantic-ui-react";
+import { Button, Icon, Table } from "semantic-ui-react";
 import Navbar from "../components/Navbar";
 import apiHandler from "../api/apiHandler";
 import { Link } from "react-router-dom";
@@ -60,7 +60,7 @@ export default class Manageanimals extends Component {
                 <Table.Cell>{animal.name}</Table.Cell>
                 <Table.Cell>{animal.description}</Table.Cell>
                 <Table.Cell> <Link to={`/Animals/${animal._id}/edit`}>
-                <Icon name="edit"/>
+                <Icon name="edit"/> 
         </Link></Table.Cell>
               </Table.Row>
             })}

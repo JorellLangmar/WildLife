@@ -23,7 +23,7 @@ const NavBar = (props) => {
   }
 
   return (
-    <Navbar fixed="top" collapseOnSelect expand="lg" variant="light" style={{backgroundColor:"transparent"}}>
+    <Navbar sticky="top" collapseOnSelect expand="lg" variant="light" style={{backgroundColor:"transparent"}}>
       <Navbar.Brand href="/"><img src="https://res.cloudinary.com/dxgllmny2/image/upload/v1602864519/roarLogo_vq5loi.png" alt="Logo-Roar" className="roarLogo" style={{width:"10vw"}}/></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

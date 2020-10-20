@@ -4,9 +4,11 @@ import AddEditAnimal from "../components/Forms/FormNewEdit";
 
 const EditAnimals = (props) => {
   return (
-    <div>
+    <div className="createanimals">
       <Navbar />
-      <AddEditAnimal action="edit" id={props.match.params.id} />
+      <div>
+        <AddEditAnimal action="edit" id={props.match.params.id} />
+      </div>
     </div>
   );
 };

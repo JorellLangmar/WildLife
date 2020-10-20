@@ -1,70 +1,75 @@
-.animalDetails {
+.animalTarget .animalDetails {
     background-color:  rgb(240, 240, 240);
     border-radius: 20px;
     padding : 40px;
-    margin : 40px;  
+    margin : 20px 40px;  
+    box-sizing: border-box;
 }
 
-.animalDetails * {
+.animalTarget .animalDetails * {
     color:#455;
 }
 
-.bold {
+.animalTarget .bold {
     font-weight: bold;
 }
 
-.name {
+.animalTarget .name {
     font-size: 3em;
 }
 
-.animalDetails p {
+.animalTarget .animalDetails p {
     font-size : 1.3em;
 }
 
-.specie {
+.animalTarget .specie {
     font-style : italic;
 }
  
-.ani-id {
+.animalTarget .ani-id {
     margin-top : 20px;
 }
 
-.mid-part {
+.animalTarget .mid-part {
     padding-right : 25px;
 }
 
-.desc {
+.animalTarget .desc {
     text-align: justify;
 }
 
-.animalPortrait {
+.animalTarget .animalPortrait {
     border-radius: 10px;
+    width: 80%
 }
 
-.sponsorship {
+.animalTarget .sponsorship {
     background-color:  rgb(240, 240, 240);
     border-radius: 20px;
     padding : 40px;
-    margin : 40px;  
+    margin : 40px;
+    margin-bottom: 0;  
+    box-sizing: border-box;
 }
 
-.sponsor {
+.animalTarget .sponsor {
     background-color: #455;
     color : white;
     border-radius : 10px;
     text-align: center;
     font-size: 2em;
-    padding-top : 20px;
-    padding-bottom: 30px;
+    padding-top : 10px;
+    padding-bottom: 10px;
+    
 }
 
 
-.why-sponsor {
+.animalTarget .why-sponsor {
   text-align: center;
   margin-bottom : 20px;
 }
 
-.why {
+.animalTarget .why {
     background-color: #455;
     color : white;
     width : 400px;
@@ -74,18 +79,24 @@
     margin-bottom : 20px;
 }
 
-.why2 {
+.animalTarget .why2 {
     color : #455;
     margin-bottom : 20px;
 }
 
-.text-sponsor {
+.animalTarget .text-sponsor {
     color : #455;
-    width : 800px;
+    width : 60%;
     margin : 0 auto;
     font-size: 1.1em;
 }
 
-.grid {
+.animalTarget .grid {
     justify-content: center;
+}
+
+.animalTarget {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
 }

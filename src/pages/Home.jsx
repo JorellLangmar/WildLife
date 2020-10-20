@@ -8,9 +8,9 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-          <Navbar />
         
         <div className="home">
+          <Navbar />
         <div data-aos="fade-up">  
           <h1>R.O.A.R.</h1>
           <h2>Reach Out And Rescue</h2>

@@ -73,6 +73,15 @@ export default {
     .catch(errorHandler)
   },
 
+  editUser(id, data) {
+    console.log("id ==>", id);
+    console.log("data ==>", data);
+    return service
+    .patch(`/api/user/${id}`, data)
+    .then((res) => res.data)
+    .catch(errorHandler)
+  },
+
   getSome(data) {
     // console.log(data);
     return service

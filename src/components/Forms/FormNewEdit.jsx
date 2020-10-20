@@ -97,10 +97,9 @@ class AddEditAnimal extends Component {
   };
 
   render() {
-    const { value } = this.state;
     // console.log(value);
     return (
-      <div className="createanimals">
+      <div>
         <Form style={{ padding: "15%" }}>
           <Form.Group widths="equal">
             <Form.Input

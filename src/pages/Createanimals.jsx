@@ -5,9 +5,11 @@ import AddEditAnimal from "../components/Forms/FormNewEdit";
 class CreateAnimals extends React.Component {
   render() {
     return (
-      <div>
+      <div className="createanimals">
         <Navbar />
-        <AddEditAnimal />
+        <div>
+          <AddEditAnimal />
+        </div>
       </div>
     );
   }

@@ -1,9 +1,6 @@
 import React from "react";
 import apiHandler from "../api/apiHandler";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import { Checkbox } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
 import "../styles/animalCards.css";
 import { Link } from "react-router-dom";
 
@@ -30,6 +27,9 @@ class AnimalCard extends React.Component {
       });
   };
 
+
+
+
   handleCheck = (e, { value }) => {
     let duplicateAnimals = [...this.state.animalcheck];
     duplicateAnimals = this.state.animalcheck.includes(value);
@@ -37,7 +37,7 @@ class AnimalCard extends React.Component {
       let result = this.state.animalcheck.filter((c) => {
         return c !== value;
       });
-      if ((result.length == 0)) {
+      if ((result.length === 0)) {
         result = this.state.species;
       };
       console.log(result);

@@ -13,7 +13,7 @@ import 'semantic-ui-css/semantic.min.css'
 import CreateAnimals from "./pages/Createanimals";
 import EditAnimals from "./pages/Editanimals";
 import ManageAnimals from "./pages/Manageanimals";
-import AnimalDetail from "./components/AnimalDetail";
+import AnimalOne from "./pages/AnimalOne";
 
 class App extends React.Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class App extends React.Component {
           <Route exact path="/Createanimals" component={CreateAnimals} />
           <Route exact path="/Manageanimals" component={ManageAnimals} />
           <ProtectedRoute exact path="/profile" component={Profile} />
-          <Route exact path="/:id" component={AnimalDetail} />
+          <Route exact path="/:id" component={AnimalOne} />
         </Switch>
       </div>
     );
