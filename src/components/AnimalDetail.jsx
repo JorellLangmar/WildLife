@@ -11,11 +11,21 @@ class AnimalDetail extends React.Component {
 
   state = {
     animal: "",
-    color: "black",
+    color: "",
   };
 
   componentDidMount = () => {
-    console.log(this.props);
+    console.log(this.context);
+    if (this.context.user.favoriteAnimal.includes(this.props.id)) {
+      this.setState({
+        color: "red",
+      });
+    } else {
+      this.setState({
+        color: "black",
+      });
+    }
+    console.log(this.state.color);
     apiHandler
       .getOne("/api/animal/", this.props.id)
       .then((apiRes) => {
@@ -34,23 +44,26 @@ class AnimalDetail extends React.Component {
       favoriteAnimalsArray.push(this.props.id);
       this.setState({
         color: "red",
-      })
-      this.context.user.favoriteAnimal = favoriteAnimalsArray
-      console.log(this.context.user.id);
+      });
+      this.context.user.favoriteAnimal = favoriteAnimalsArray;
       apiHandler
         .editUser(this.context.user._id, this.context.user)
-        .then(() => {
-          this.props.history.push("/");
-        })
         .catch((error) => {
           console.log(error);
         });
-        ;
     } else {
-      console.log(favoriteAnimalsArray);
+      let result = favoriteAnimalsArray.filter((c) => {
+        return c !== this.props.id;
+      });
       this.setState({
         color: "black",
       });
+      this.context.user.favoriteAnimal = result;
+      apiHandler
+        .editUser(this.context.user._id, this.context.user)
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
 
@@ -96,9 +109,10 @@ class AnimalDetail extends React.Component {
                 <p>
                   <span className="bold">
                     <Icon
+                      style={{ cursor: "pointer" }}
                       name="heart"
                       color={this.state.color}
-                      onClick={this.handleFavorite}
+                      onClick={() => this.handleFavorite()}
                     />
                   </span>
                 </p>
