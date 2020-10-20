@@ -9,13 +9,22 @@ class Home extends React.Component {
     return (
       <div>
           <Navbar />
+        
         <div className="home">
+        <div data-aos="fade-up">  
           <h1>R.O.A.R.</h1>
           <h2>Reach Out And Rescue</h2>
         </div>
+        </div>
+        <div data-aos="fade-up"> 
         <Whatwedo/>
+        </div>
+        <div data-aos="fade-up">  
         <Kpis/>
+        </div>
+        <div data-aos="fade-up">  
         <AnimalCard/>
+        </div>
       </div>
     );
   }
