@@ -1,0 +1,37 @@
+.profilePage {
+    background-image: url("../media/cheetah.jpeg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh
+}
+
+.profile,
+.favorites,
+.sponsoring,
+.adoptions {
+    background-color:  rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 2%;
+    font-size: 1.1em;
+
+    
+}
+
+.profile-cards h2 {
+    color: #dedede;
+    text-align: center;
+    padding-bottom: 10%;
+    font-weight: lighter;
+}
+
+.profile-cards {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10%;
+    color: #dedede;
+}
+
+.profile p {
+    padding-bottom: 3%;
+}
+

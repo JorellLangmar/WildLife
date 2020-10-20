@@ -15,6 +15,8 @@ import "./styles/animalCards.css";
 import "./styles/createanimals.css";
 import "./styles/animalDetail.css";
 import "./styles/manageAnimals.css";
+import "./styles/profile.css";
+import "./styles/signin.css";
 
 
 ReactDOM.render(
