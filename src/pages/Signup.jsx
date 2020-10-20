@@ -4,12 +4,10 @@ import Navbar from "../components/Navbar";
 
 const Signup = (props) => {
   return (
-    <div>
-      <Navbar />
       <div className="signupPage">
+       <Navbar />
         <FormSizeDemo />
       </div>
-    </div>
   );
 };
 

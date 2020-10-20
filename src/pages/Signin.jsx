@@ -4,12 +4,10 @@ import Navbar from "../components/Navbar";
 import "../styles/signin.css";
 
 const Signin = (props) => {
-  return <div>
+  return <div className="signinPage">
     <Navbar />
-      <div className="signinPage">
     <FormSignin />
     </div>
-  </div>
 };
 
 export default Signin;

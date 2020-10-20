@@ -88,7 +88,7 @@ class AnimalCard extends React.Component {
                 <li
                   class="nav-item"
                   data-toggle="pill"
-                  style={{ color: "white" }}
+                  style={{ color: "white",}}
                 >
                   <Checkbox value={specie} onChange={this.handleCheck} />{" "}
                   {specie}
