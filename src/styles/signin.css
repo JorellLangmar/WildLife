@@ -2,5 +2,46 @@
     background-image: url("../media/lionBackground.jpeg");
     background-size: cover;
     width: 100vw;
-    height: 100vh
+    height: 100vh;
+    position: relative;
 }
+
+.signinForm {
+    display: flex;
+    flex-direction: column;
+    width :30%;
+    position: absolute;
+    top :25%;
+    left :50%;
+   
+}
+
+.sub-btn {
+    width : 20%;
+    margin-top: 5%;
+    border: lightgrey solid 1px;
+    background-color: white;
+    padding: 1%;
+    border-radius:2px;
+}
+
+.sub-btn:hover {
+  color: #5ad;
+  border: #5ad solid 1px;
+}
+
+.formSI {
+     font-size: 150%;
+     margin-top: 8%;
+}
+
+.formSI2 {
+    font-size: 150%;
+    border: lightgrey solid 1px;
+    border-radius:2px;
+}
+
+.formSI2:hover {
+    border: #5ad solid 1px;
+}
+
