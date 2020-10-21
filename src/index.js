@@ -12,6 +12,7 @@ import "./styles/signup.css";
 import "./styles/whatwedo.css";
 import "./styles/kpis.css";
 import "./styles/animalCards.css";
+import "./styles/animalCardsProfile.css";
 import "./styles/createanimals.css";
 import "./styles/animalDetail.css";
 import "./styles/manageAnimals.css";

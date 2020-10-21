@@ -36,9 +36,9 @@ export default class Manageanimals extends Component {
 
   render() {
     return (
-      <div>
+      <div className="table-manage">
         <Navbar />
-        <div className="table-manage">
+        <div >
           <Table celled compact definition>
             <Table.Header fullWidth>
               <Table.Row>
