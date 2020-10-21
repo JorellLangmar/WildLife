@@ -16,14 +16,16 @@ class AnimalDetail extends React.Component {
 
   componentDidMount = () => {
     console.log(this.context);
-    if (this.context.user.favoriteAnimal.includes(this.props.id)) {
-      this.setState({
-        color: "red",
-      });
-    } else {
-      this.setState({
-        color: "black",
-      });
+    if (this.context.isLoggedIn) {
+      if (this.context.user.favoriteAnimal.includes(this.props.id)) {
+        this.setState({
+          color: "red",
+        });
+      } else {
+        this.setState({
+          color: "black",
+        });
+      }
     }
     console.log(this.state.color);
     apiHandler
@@ -101,13 +103,14 @@ class AnimalDetail extends React.Component {
               </div>
             </Grid.Column>
             <Grid.Column width={3}>
+            {this.context.isLoggedIn && (
             <Icon
                       style={{ cursor: "pointer" }}
                       name="heart"
                       className="iconHeart"
                       color={this.state.color}
                       onClick={() => this.handleFavorite()}
-                    />
+                    />)}
               <div className="ani-id">
                 <p>
                   <span className="bold">Age :</span>
@@ -150,7 +153,7 @@ class AnimalDetail extends React.Component {
             <Grid>
               <Grid.Column width={4}>
                 <div className="sponsor">
-                  <Link to={`/#`} style={{ color: "white" }}>
+                  <Link to={`/ponctualsponsor`} style={{ color: "white" }}>
                     Punctual
                     <br /> Sponsorship
                   </Link>
