@@ -95,28 +95,19 @@ class AnimalDetail extends React.Component {
                     <span className="bold">About :</span>
                   </p>
                   <p>
-                    {this.state.animal.description}: Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.
+                    {this.state.animal.description}
                   </p>
                 </div>
               </div>
             </Grid.Column>
             <Grid.Column width={3}>
-              <div className="ani-id">
-                <p>
-                  <span className="bold">
-                    <Icon
+            <Icon
                       style={{ cursor: "pointer" }}
                       name="heart"
+                      className="iconHeart"
                       color={this.state.color}
                       onClick={() => this.handleFavorite()}
                     />
-                  </span>
-                </p>
-              </div>
               <div className="ani-id">
                 <p>
                   <span className="bold">Age :</span>
