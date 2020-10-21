@@ -14,7 +14,7 @@ import CreateAnimals from "./pages/Createanimals";
 import EditAnimals from "./pages/Editanimals";
 import ManageAnimals from "./pages/Manageanimals";
 import AnimalOne from "./pages/AnimalOne";
-import PonctualSponsor from "./pages/PonctualSponsor";
+import PunctualSponsor from "./pages/PunctualSponsor";
 
 
 class App extends React.Component {
@@ -37,7 +37,7 @@ class App extends React.Component {
           <Route exact path="/Animals/:id/edit" component={EditAnimals} />
           <Route exact path="/Createanimals" component={CreateAnimals} />
           <Route exact path="/Manageanimals" component={ManageAnimals} />
-          <Route exact path="/ponctualsponsor" component={PonctualSponsor} />
+          <Route exact path="/punctualsponsor" component={PunctualSponsor} />
           <ProtectedRoute exact path="/profile" component={Profile} />
           <Route exact path="/:id" component={AnimalOne} />
         </Switch>

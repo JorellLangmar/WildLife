@@ -1,0 +1,64 @@
+.puncSponsor {
+    background-image: url("../media/cheetah.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    min-height: 100vh;
+
+}
+
+.quote {
+    color :whitesmoke;
+    font-style: oblique;
+    width : 40%;
+    font-size: 1.2em;
+    float:right;
+    margin-right:4%;
+    text-align: center;
+}
+
+.quote span {
+    font-weight: bold;
+    padding-left: 10%;
+}
+
+.PS {
+    width :40%;
+    margin-top:1%;
+    margin-left: 2%;
+    font-size : 1.1em;
+    text-align: justify;
+    color:rgb(240, 240, 240);
+    /* color: #182A1D; */
+    background-color:rgba(68,85,85,0.7);
+    padding:2% 2% 1% 2%;
+  
+}
+
+.PS h1, .PS h3 {
+    margin: 2%;
+    text-align: center;
+    color:rgb(240, 240, 240);
+    /* color: #182A1D; */
+}
+
+.line {
+    margin-bottom : 1%;
+}
+
+.link-payment {
+    background-color:rgb(240, 240, 240);
+    width:50%;
+    margin: 5% auto;
+    padding: 2% 5%;
+    border: #182A1D solid 1px;
+    font-size : 1.3em;
+    text-align: center;
+}
+
+.list li{
+    list-style-type: initial;
+    margin-left:3%;
+}
+
+    
