@@ -161,7 +161,7 @@ class AnimalDetail extends React.Component {
               </Grid.Column>
               <Grid.Column width={4}>
                 <div className="sponsor">
-                  <Link to={`/#`} style={{ color: "white" }}>
+                  <Link to={`/paymentform`} style={{ color: "white" }}>
                     Monthly
                     <br /> Sponsorship
                   </Link>
