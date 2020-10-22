@@ -153,7 +153,7 @@ class AnimalDetail extends React.Component {
             <Grid>
               <Grid.Column width={4}>
                 <div className="sponsor">
-                  <Link to={`/punctualsponsor`} style={{ color: "white" }}>
+                  <Link to={`/punctualsponsor/${this.state.animal._id}`} style={{ color: "white" }}>
                     Punctual
                     <br /> Sponsorship
                   </Link>
