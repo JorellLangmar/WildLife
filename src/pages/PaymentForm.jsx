@@ -15,32 +15,43 @@ class PaymentForm extends Component {
   static contextType = UserContext;
 
   componentDidMount = () => {
+
     let array = this.props.match.params.id.split("&");
-    console.log(this.context.user);
 
     let id = array[0];
     let typeoffunding = array[1];
     let funding = {};
-    let adopted = {};
+    let isadopted = {};
 
     if (typeoffunding === "sponsoring") {
-      funding = {sponsoring : id}
+      let ids = [...this.context.user.sponsoring]
+      ids.push(id)
+      funding = {sponsoring : ids}
     }
     else if (typeoffunding === "adopted") {
-      funding = {adopted : id}
-      adopted = {adopted : true}
-      apiHandler
-        .editAnimal(id, adopted)
-        .catch((error) => {
-          console.log(error);
-        });
+      // console.log(array[0]);
+      let ids = [...this.context.user.adoption]
+      ids.push(id)
+      funding = {adoption : ids}
+      isadopted = {adopted : true}
+      console.log(isadopted);
     }
 
+
+
     apiHandler
-        .editUser(this.context.user._id, funding)
-        .catch((error) => {
-          console.log(error);
-        });
+    .editAnimal(id, isadopted)
+    .then(() => {
+      apiHandler
+      .editUser(this.context.user._id, funding)
+      .catch((error) => {
+        console.log(error);
+      });
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
   };
 
   render() {

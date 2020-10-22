@@ -4,7 +4,7 @@
     background-attachment: fixed;
     width: 100vw;
     min-height: 100vh;
-
+    padding-bottom: 5%;
 }
 
 .quote {
@@ -32,6 +32,7 @@
     /* color: #182A1D; */
     background-color:rgba(68,85,85,0.7);
     padding:2% 2% 1% 2%;
+    border: #182A1D 1px solid;
   
 }
 

@@ -16,6 +16,8 @@ import ManageAnimals from "./pages/Manageanimals";
 import AnimalOne from "./pages/AnimalOne";
 import PaymentForm from "./pages/PaymentForm";
 import PunctualSponsor from "./pages/PunctualSponsor";
+import MonthlySponsor from "./pages/MonthlySponsor";
+import Adoption from "./pages/Adoption";
 
 
 class App extends React.Component {
@@ -41,6 +43,8 @@ class App extends React.Component {
           <ProtectedRoute exact path="/paymentform/:id" component={PaymentForm} />
           <Route exact path="/punctualsponsor/:id" component={PunctualSponsor} />
           <ProtectedRoute exact path="/profile" component={Profile} />
+          <Route exact path="/adoption/:id" component={Adoption} />
+          <Route exact path="/monthlysponsor/:id" component={MonthlySponsor} />
           <Route exact path="/:id" component={AnimalOne} />
         </Switch>
       </div>

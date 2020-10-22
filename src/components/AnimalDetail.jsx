@@ -96,21 +96,20 @@ class AnimalDetail extends React.Component {
                   <p>
                     <span className="bold">About :</span>
                   </p>
-                  <p>
-                    {this.state.animal.description}
-                  </p>
+                  <p>{this.state.animal.description}</p>
                 </div>
               </div>
             </Grid.Column>
             <Grid.Column width={3}>
-            {this.context.isLoggedIn && (
-            <Icon
-                      style={{ cursor: "pointer" }}
-                      name="heart"
-                      className="iconHeart"
-                      color={this.state.color}
-                      onClick={() => this.handleFavorite()}
-                    />)}
+              {this.context.isLoggedIn && (
+                <Icon
+                  style={{ cursor: "pointer" }}
+                  name="heart"
+                  className="iconHeart"
+                  color={this.state.color}
+                  onClick={() => this.handleFavorite()}
+                />
+              )}
               <div className="ani-id">
                 <p>
                   <span className="bold">Age :</span>
@@ -153,7 +152,19 @@ class AnimalDetail extends React.Component {
             <Grid>
               <Grid.Column width={4}>
                 <div className="sponsor">
-                  <Link to={`/punctualsponsor/${this.state.animal._id}`} style={{ color: "white" }}>
+                  {this.state.animal.adopted && (
+                    <div class="overlay">
+                      <div class="text-overlay">
+                        <Link to={`/`} className="meetLink">
+                          Already adopted!
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                  <Link
+                    to={`/punctualsponsor/${this.state.animal._id}`}
+                    style={{ color: "white" }}
+                  >
                     Punctual
                     <br /> Sponsorship
                   </Link>
@@ -161,7 +172,19 @@ class AnimalDetail extends React.Component {
               </Grid.Column>
               <Grid.Column width={4}>
                 <div className="sponsor">
-                  <Link to={`/paymentform`} style={{ color: "white" }}>
+                  {this.state.animal.adopted && (
+                    <div class="overlay">
+                      <div class="text-overlay">
+                        <Link to={`/`} className="meetLink">
+                          Already adopted!
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                  <Link
+                    to={`/monthlysponsor/${this.state.animal._id}`}
+                    style={{ color: "white" }}
+                  >
                     Monthly
                     <br /> Sponsorship
                   </Link>
@@ -169,7 +192,19 @@ class AnimalDetail extends React.Component {
               </Grid.Column>
               <Grid.Column width={4}>
                 <div className="sponsor">
-                  <Link to={`/#`} style={{ color: "white" }}>
+                  {this.state.animal.adopted && (
+                    <div class="overlay">
+                      <div class="text-overlay">
+                        <Link to={`/`} className="meetLink">
+                          Already adopted!
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                  <Link
+                    to={`/adoption/${this.state.animal._id}`}
+                    style={{ color: "white" }}
+                  >
                     1 year
                     <br />
                     Adoption
