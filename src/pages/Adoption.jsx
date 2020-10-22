@@ -14,9 +14,8 @@ export default class PunctualSponsor extends Component {
                         <span>- Sir David Attenborough</span></div>
 
                 <div className="PS">
-                   <h1>Punctual Sponsorship</h1>
-                   <p>If you’d prefer not to set up a direct debit you can make a one-off payment of the amount of your choice!
-                      Not only will you be providing invaluable care, you will also receive a great gift pack.</p>
+                   <h1>1 year adoption</h1>
+                   <p>For 900$ adopt an animal for 1 whole year!  Not only will you be providing invaluable care, you will also receive a great gift pack.</p>
                       <h3>How your money will help :</h3>
                 
                       <ul className="list">
@@ -36,10 +35,13 @@ export default class PunctualSponsor extends Component {
                    <li>A photo of your sponsored animal to print and keep</li>
                    <li>A fact sheet about your animal</li>
                    <li>A quarterly email including photos and an update on your animal</li>
+                   <li>An insider report of all our rescue operations and updates on all the animals at our rescue center</li>
+                   <li>A R.O.A.R. tote bag</li>
+                   <li>Your name for life on our adoption board at the sanctuary</li>
                    </ul>
 
                    <div className="link-payment"><Link to={`/paymentform`} style={{ color: "#455",}}>
-                    Sponsor now !
+                    Adopt now !
                   </Link></div>
 
                 </div>
