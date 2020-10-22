@@ -19,6 +19,7 @@ import "./styles/animalDetail.css";
 import "./styles/manageAnimals.css";
 import "./styles/profile.css";
 import "./styles/signin.css";
+import "./styles/punctualSponsor.css";
 
 
 ReactDOM.render(
