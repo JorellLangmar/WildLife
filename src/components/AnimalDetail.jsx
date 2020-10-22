@@ -73,7 +73,7 @@ class AnimalDetail extends React.Component {
     return (
       <div>
         <div className="animalDetails">
-          <Grid>
+          <Grid >
             <Grid.Column width={4}>
               <img
                 src={this.state.animal.profileImage}
