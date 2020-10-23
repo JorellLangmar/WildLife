@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 425px) {
     .whatwedo {
-        margin-top : 50%;
+        margin-top : 70%;
     }
 
     .whatwedo h1 {
@@ -34,6 +34,6 @@
     }
 
     .whatwedo p {
-        margin-bottom :30%;
+        margin-bottom :50%;
     }
 }

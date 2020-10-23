@@ -110,5 +110,14 @@
 .animalTarget .why-sponsor {
       margin-bottom: 10%;
 }
+.animalTarget .animalPortrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animalTarget .mid-part {
+    justify-content: center;
+}
 
 }

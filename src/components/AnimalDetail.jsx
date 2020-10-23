@@ -73,8 +73,8 @@ class AnimalDetail extends React.Component {
     return (
       <div>
         <div className="animalDetails">
+        
           <Grid stackable columns={3}>
-
             <Grid.Column width={4}>
               <img
                 src={this.state.animal.profileImage}

@@ -53,7 +53,7 @@ class FormSizeDemo extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="formSU">
         <Form
           labelCol={{
             span: 4,
@@ -161,7 +161,7 @@ class FormSizeDemo extends React.Component {
             <Button onClick={this.handleSubmit}>Submit</Button>
           </Form.Item>
         </Form>
-      </>
+      </div>
     );
   }
 }
