@@ -74,6 +74,20 @@ class Profile extends React.Component {
             console.log(apiErr);
           });
       }
+    } else if (name === "Favorites") {
+      if (this.state.favorites.length === 0) {
+        this.setState({ favoriteDisplay: [] });
+      } else {
+        apiHandler
+          .getSomeId(`${this.context.user.favoriteAnimal}`)
+          .then((apiRes) => {
+            this.setState({ favoriteDisplay: apiRes });
+            console.log(apiRes);
+          })
+          .catch((apiErr) => {
+            console.log(apiErr);
+          });
+      }
     } else {
       if (this.state.sponsored.favorites === 0) {
         this.setState({ favoriteDisplay: [] });
@@ -94,7 +108,7 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="profilePage">
-      <Navbar />
+        <Navbar />
         <Item.Group style={{ margin: "5vh 5vw" }}>
           <Item>
             <Item.Image
@@ -138,8 +152,8 @@ class Profile extends React.Component {
               onClick={this.handleItemClick}
             />
           </Menu>
-          
-          {/* <Segment style={{ margin: "0vh 5vw", background: "transparent" }}> */}
+
+          <Segment style={{ margin: "0vh 5vw", background: "transparent" }}>
             <div className="animalGridProfile">
               {this.state.favoriteDisplay.map((animal, i) => {
                 return (
@@ -161,7 +175,7 @@ class Profile extends React.Component {
                 );
               })}
             </div>
-          {/* </Segment> */}
+          </Segment>
         </div>
       </div>
     );
