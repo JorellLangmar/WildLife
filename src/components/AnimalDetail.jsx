@@ -73,7 +73,8 @@ class AnimalDetail extends React.Component {
     return (
       <div>
         <div className="animalDetails">
-          <Grid>
+          <Grid stackable columns={3}>
+
             <Grid.Column width={4}>
               <img
                 src={this.state.animal.profileImage}
@@ -150,7 +151,7 @@ class AnimalDetail extends React.Component {
           </div>
 
           <div className="grid">
-            <Grid>
+            <Grid  stackable columns={4}>
               <Grid.Column width={4}>
                 <div className="sponsor">
                   <Link to={`/punctualsponsor`} style={{ color: "white" }}>

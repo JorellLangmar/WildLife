@@ -25,3 +25,18 @@
     justify-content: center;
     letter-spacing: 12px;
 }
+
+@media screen and (max-width: 425px) {
+    .home {
+        width : 100vw;
+       
+    }
+
+    .home h1 {
+      font-size: 600%;;
+    }
+
+    .home h2 {
+        text-align: center;
+    }
+ }
