@@ -40,11 +40,11 @@ class App extends React.Component {
           <Route exact path="/Animals/:id/edit" component={EditAnimals} />
           <Route exact path="/Createanimals" component={CreateAnimals} />
           <Route exact path="/Manageanimals" component={ManageAnimals} />
-          <Route exact path="/paymentform" component={PaymentForm} />
-          <Route exact path="/punctualsponsor" component={PunctualSponsor} />
+          <ProtectedRoute exact path="/paymentform/:id" component={PaymentForm} />
+          <Route exact path="/punctualsponsor/:id" component={PunctualSponsor} />
           <ProtectedRoute exact path="/profile" component={Profile} />
-          <Route exact path="/adoption" component={Adoption} />
-          <Route exact path="/monthlysponsor" component={MonthlySponsor} />
+          <Route exact path="/adoption/:id" component={Adoption} />
+          <Route exact path="/monthlysponsor/:id" component={MonthlySponsor} />
           <Route exact path="/:id" component={AnimalOne} />
         </Switch>
       </div>

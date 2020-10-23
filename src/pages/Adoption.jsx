@@ -4,6 +4,10 @@ import "../styles/punctualSponsor.css";
 import { Link } from "react-router-dom";
 
 export default class PunctualSponsor extends Component {
+    state = {
+        typeoffunding: "adopted",
+      };
+
     render() {
         return (
             <div className="puncSponsor">
@@ -40,7 +44,7 @@ export default class PunctualSponsor extends Component {
                    <li>Your name for life on our adoption board at the sanctuary</li>
                    </ul>
 
-                   <div className="link-payment"><Link to={`/paymentform`} style={{ color: "#455",}}>
+                   <div className="link-payment"><Link to={`/paymentform/${this.props.match.params.id}&${this.state.typeoffunding}`} style={{ color: "#455",}}>
                     Adopt now !
                   </Link></div>
 
