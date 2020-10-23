@@ -74,7 +74,7 @@ class AnimalCard extends React.Component {
 
   render() {
     return (
-      <div className="Filter-Animals">
+      <div id="allAnimals" className="Filter-Animals">
         <div
           style={{
             padding: "1vw 3vw",

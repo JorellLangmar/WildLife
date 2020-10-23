@@ -138,7 +138,8 @@ class Profile extends React.Component {
               onClick={this.handleItemClick}
             />
           </Menu>
-          <Segment style={{ margin: "0vh 5vw", background: "transparent" }}>
+          
+          {/* <Segment style={{ margin: "0vh 5vw", background: "transparent" }}> */}
             <div className="animalGridProfile">
               {this.state.favoriteDisplay.map((animal, i) => {
                 return (
@@ -146,12 +147,12 @@ class Profile extends React.Component {
                     <img
                       src={animal.profileImage}
                       alt="Animal Portrait"
-                      className="animalPhotoProfile"
+                      className="animalPhoto"
                     />
                     <h2 className="animalNameProfile">{animal.name}</h2>
-                    <div className="overlayProfile">
-                      <div className="text-overlayProfile">
-                        <Link to={`/${animal._id}`} className="meetLinkProfile">
+                    <div className="overlay">
+                      <div className="text-overlay">
+                        <Link to={`/${animal._id}`} className="meetLink">
                           Meet {animal.name}
                         </Link>
                       </div>
@@ -160,7 +161,7 @@ class Profile extends React.Component {
                 );
               })}
             </div>
-          </Segment>
+          {/* </Segment> */}
         </div>
       </div>
     );

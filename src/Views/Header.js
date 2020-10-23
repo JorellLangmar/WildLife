@@ -6,6 +6,8 @@ import {
     Grid
 } from '@material-ui/core';
 import { makeStyles, } from '@material-ui/core/styles';
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
     topAppBar: {
@@ -35,8 +37,10 @@ const AppBars = ({ title, logoLink }) => {
             <Toolbar className={classes.toolbar}>
                 {title !== undefined &&
                     <Grid container item direction="row" alignItems="center" xs={12} sm={6}>
-                        <Grid item>
+                        <Grid item style={{marginRight:"5%"}}>
+                        <Link to={`/`}>
                             <img src={`https://res.cloudinary.com/dxgllmny2/image/upload/v1603271133/LionIcon_dqetpr.png`} alt="logo" height="70px" />
+                        </Link>
                         </Grid>
                         <Grid item>
                             <Typography className={classes.title} variant="h4" noWrap color="primary">

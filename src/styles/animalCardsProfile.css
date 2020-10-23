@@ -1,82 +1,95 @@
 .animalGridProfile {
-   justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(10vw, 20vw));
-    grid-template-rows: auto auto auto;
-    column-gap: 5vw;
-    row-gap: 2%;
-    margin-bottom: 0%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20vw, 20vw));
+  grid-template-rows: auto auto auto;
+  column-gap: 45px;
+  row-gap: 60px;
+  /* margin-bottom: 40px; */
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .animalCardsProfile {
-    border-radius: 10px; 
-    background-color: #455;
-    position: relative;
-    /* border: solid 2px white */
+  border-radius: 10px;
+  background-color: #455;
+  position: relative;
+  /* border: solid 2px white */
 }
 
 .animalCardsProfile {
-  border-radius: 10px; 
+  border-radius: 10px;
   position: relative;
 }
 
 .animalPhotoProfile {
-   width: 180px;
-   border-radius: 10px;
-   margin: 30px auto;
-
+  width: 180px;
+  border-radius: 10px;
+  margin: 30px auto;
 }
 
 .animalNameProfile {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.8em;
-    color:white;
-    font-weight: lighter;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  color: white;
+  font-weight: lighter;
 }
 
 .overlayProfile {
-    position: absolute;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #455;
-    color: #455;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6em;
-    font-weight: lighter;
-    opacity: 0;
-    transition: opacity 0.35s;
-  }
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #455;
+  color: #455;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  font-weight: lighter;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
 
-  .overlayProfile:hover {
-    opacity: 1;
-  }
-  
-  .overlayProfile > * {
-    transform: translateY(20px);
-    transition: transform 0.35s;
-  }
-  
-  .overlayProfile:hover > * {
-    transform: translateY(0);
-  }
-  .text-overlayProfile {
-    text-align: center;
-  }
+.overlayProfile:hover {
+  opacity: 1;
+}
+
+.overlayProfile > * {
+  transform: translateY(20px);
+  transition: transform 0.35s;
+}
+
+.overlayProfile:hover > * {
+  transform: translateY(0);
+}
+.text-overlayProfile {
+  text-align: center;
+}
 
 .meetLinkProfile {
-     background-color: white;
-     border-radius: 10px;
-     padding: 10px 20px;
-   
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 .meetLinkProfile:hover {
-      text-decoration: none;
-     color: white;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 425px) {
+  .animalGridProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animalCardsProfile {
+    width : 80%;
+    
+  }
 }
