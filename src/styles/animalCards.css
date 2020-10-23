@@ -79,3 +79,16 @@
       text-decoration: none;
      color: white;
 }
+
+@media screen and (max-width: 425px) {
+  .animalGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animalCards {
+    width : 80%;
+    
+  }
+}

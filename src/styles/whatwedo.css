@@ -23,3 +23,17 @@
      font-size : 1.3em;
      margin-top : 2%;
 }
+
+@media screen and (max-width: 425px) {
+    .whatwedo {
+        margin-top : 50%;
+    }
+
+    .whatwedo h1 {
+        margin-bottom : 5%;
+    }
+
+    .whatwedo p {
+        margin-bottom :30%;
+    }
+}

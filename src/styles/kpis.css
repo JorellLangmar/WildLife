@@ -11,7 +11,7 @@
 .kpi {
   color: #455;
   border-radius : 10px;
-  font-size: 1.2em;
+  font-size: 120%;
   text-align: center;
   padding: 15%;
   box-shadow:
@@ -26,44 +26,19 @@
 
 .num {
   font-weight: bold;
-  font-size: 4em;
+  font-size: 300%;
   color: #455;
   text-align: center;
 }
 
+@media screen and (max-width: 425px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    
+  }
 
-
-/* .wrapper {
-  background-color: lightgrey;
-  color: black;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0%;
-  grid-auto-rows: minmax(30vh, auto);
-  align-items: center;
- 
+  .kpi {
+    padding-top : 0;
+  }
 }
-.one {
-  text-align: center;
-  width: 25vw;
-  grid-column: 1 / 4;
-  grid-row: 1;
-}
-.two {
-  text-align: center;
-  width: 25vw;
-  grid-column: 2 / 4;
-  grid-row: 1;
-}
-.three {
-  text-align: center;
-  width: 25vw;
-  grid-column: 3 / 4;
-  grid-row: 1;
-}
-.four {
-  text-align: center;
-  width: 25vw;
-  grid-column: 4/ 4;
-  grid-row: 1;
-} */

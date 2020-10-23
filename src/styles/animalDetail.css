@@ -1,8 +1,8 @@
 .animalTarget .animalDetails {
     background-color:  rgb(240, 240, 240);
     border-radius: 20px;
-    padding : 40px;
-    margin : 20px 40px;  
+    padding : 5%;
+    margin : 2% 3%;  
     box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .animalTarget .animalDetails p {
-    font-size : 1.3em;
+    font-size : 130%;
 }
 
 .animalTarget .specie {
@@ -28,11 +28,11 @@
 }
  
 .animalTarget .ani-id {
-    margin-top : 20px;
+    margin-top : 3%;
 }
 
 .animalTarget .mid-part {
-    padding-right : 25px;
+    padding-right : 3%;
 }
 
 .animalTarget .desc {
@@ -47,9 +47,9 @@
 .animalTarget .sponsorship {
     background-color:  rgb(240, 240, 240);
     border-radius: 20px;
-    padding : 40px;
-    margin : 40px;
-    margin-bottom: 0;  
+    padding : 5%;
+    margin : 3%;
+    margin-bottom: 3%;  
     box-sizing: border-box;
 }
 
@@ -58,38 +58,38 @@
     color : white;
     border-radius : 10px;
     text-align: center;
-    font-size: 2em;
-    padding-top : 10px;
-    padding-bottom: 10px;
+    font-size: 180%;
+    padding-top : 5%;
+    padding-bottom: 5%;
     
 }
 
 
 .animalTarget .why-sponsor {
   text-align: center;
-  margin-bottom : 20px;
+  margin-bottom : 3%;
 }
 
 .animalTarget .why {
     background-color: #455;
     color : white;
-    width : 400px;
+    width : 35%;
     margin : 0 auto;
     border-radius: 30px;
-    padding: 5px 30px 10px 30px;
-    margin-bottom : 20px;
+    padding: 1% 1% 1.5% 1%;
+    margin-bottom : 3%;
 }
 
 .animalTarget .why2 {
     color : #455;
-    margin-bottom : 20px;
+    margin-bottom : 2%;
 }
 
 .animalTarget .text-sponsor {
     color : #455;
     width : 60%;
     margin : 0 auto;
-    font-size: 1.1em;
+    font-size: 110%;
 }
 
 .animalTarget .grid {
@@ -100,4 +100,15 @@
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
+}
+
+@media screen and (max-width: 425px) {
+    .animalTarget .why {
+        width : 90%;
+    }
+
+.animalTarget .why-sponsor {
+      margin-bottom: 10%;
+}
+
 }
