@@ -62,4 +62,12 @@
     margin-left:3%;
 }
 
-    
+@media screen and (max-width: 425px) {
+    .quote {
+        display :none;
+    }
+
+    .PS {
+        width: 96%;
+    }
+}

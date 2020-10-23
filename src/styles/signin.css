@@ -45,3 +45,14 @@
     border: #5ad solid 1px;
 }
 
+@media screen and (max-width: 425px) {
+    .signinForm {
+        width : 70%;
+        position: absolute;
+        left : 5%;
+    }
+
+    .signinPage {
+        background-position: 12%;
+    }
+}
